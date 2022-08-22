@@ -45,3 +45,7 @@ vear
 
 1. 문서 리스트 조회 조건을 변경하려면?
 	* `open.sh`의 `@last3days`의 숫자를 변경하거나 검색어를 입력할 수 있습니다.
+
+## 미래
+
+1. shell script와 vimconfig를 수정하지 않고 vim-script를 이용해 편하게 설치할 수 있게 하고 싶습니다.

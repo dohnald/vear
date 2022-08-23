@@ -45,6 +45,11 @@ vear
 
 1. 문서 리스트 조회 조건을 변경하려면?
 	* `open.sh`의 `@last3days`의 숫자를 변경하거나 검색어를 입력할 수 있습니다.
+2. vimwiki에서 checkbox toggle을 bear와 맞추려면?
+    * `.vimrc` 설정 추가
+    ```shell
+    let g:vimwiki_listsyms = '    x'
+    ```
 
 ## 미래
 

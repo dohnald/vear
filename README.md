@@ -10,27 +10,28 @@ brew install jq fzf
 ```
 
 ```shell
-# .token 수정
+# .token 수정 
+# vim ~/vear/.token
 XXXXX-XXXXXX-XXXXXX
 ```
 
 ```shell
 # .vimrc 추가
-function! SaveVear()
+function! VearSave()
     let l:save_bear_command = "~/vear/save.sh"
     let l:filename = "\"%:r\""
     execute "silent !" . l:save_bear_command . " " . filename
 endfunction
 
-function! RemoveVear()
+function! VearRemove()
     let l:save_bear_command = "~/vear/save.sh"
     let l:filename = "\"%:r\""
     execute "!rm " . filename . ".md"
 endfunction
 
 augroup vearauto
-    autocmd BufWritePost *vear/*.md call SaveVear()
-    autocmd ExitPre *vear/*.md call RemoveVear()
+    autocmd BufWritePost *vear/*.md call VearSave()
+    autocmd ExitPre *vear/*.md call VearRemove()
 augroup END
 ```
 
@@ -40,6 +41,12 @@ augroup END
 cd ~/vear
 vear
 ```
+![](./src/vear-readme1.png)
+![](./src/vear-readme2.png)
+![](./src/vear-readme3.png)
+![](./src/vear-readme4.png)
+![](./src/vear-readme5.png)
+![](./src/vear-readme6.png)
 
 ## 도움 
 
